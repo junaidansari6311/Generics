@@ -24,4 +24,25 @@ public class MaximumValueTest {
         int maximum = value.getMaximumInteger(10, 20, 30);
         Assert.assertEquals(30,maximum);
     }
+
+    @Test
+    public void givenFloatValue_WhenFirstValueIsMaximum_ShouldReturnFirstValue() {
+        MaximumValue value = new MaximumValue();
+        float maximum = value.getMaximumFloat(10.0f, 8.0f, 7.0f);
+        Assert.assertEquals(10.0,maximum,0.0f);
+    }
+
+    @Test
+    public void givenFloatValue_WhenSecondValueIsMaximum_ShouldReturnSecond() {
+        MaximumValue value = new MaximumValue();
+        float maximum = value.getMaximumFloat(8.0f,10.0f,9.0f);
+        Assert.assertEquals(10.0,maximum,0.0f);
+    }
+
+    @Test
+    public void givenFloatValue_WhenThirdValueIsMaximum_ShouldReturnThird() {
+        MaximumValue value = new MaximumValue();
+        float maximum = value.getMaximumFloat(8.0f,9.0f,10.0f);
+        Assert.assertEquals(10.0,maximum,0.0f);
+    }
 }
