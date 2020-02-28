@@ -6,63 +6,63 @@ import org.junit.Test;
 public class MaximumValueTest {
     @Test
     public void givenIntegers_WhenFirstValueIsMax_ShouldReturnFirstValue() {
-        MaximumValue value = new MaximumValue();
-        int maximum = value.getMaximumValue(10,5,9);
+        MaximumValue value = new MaximumValue(10,5,9);
+        int maximum = (int) value.getMaximumValue();
         Assert.assertEquals(10,maximum);
     }
 
     @Test
     public void givenIntegers_WhenSecondValueIsMaximum_ShouldReturnSecondValue() {
-        MaximumValue value = new MaximumValue();
-        int maximum = value.getMaximumValue(10, 15, 5);
+        MaximumValue value = new MaximumValue(10, 15, 5);
+        int maximum = (int) value.getMaximumValue();
         Assert.assertEquals(15,maximum);
     }
 
     @Test
     public void givenIntegers_WhenThirdValueIsMaximum_ShouldReturnThirdValue() {
-        MaximumValue value = new MaximumValue();
-        int maximum = value.getMaximumValue(10, 20, 30);
+        MaximumValue value = new MaximumValue(10, 20, 30);
+        int maximum = (int) value.getMaximumValue();
         Assert.assertEquals(30,maximum);
     }
 
     @Test
     public void givenFloatValue_WhenFirstValueIsMaximum_ShouldReturnFirstValue() {
-        MaximumValue value = new MaximumValue();
-        float maximum = value.getMaximumValue(10.0f, 8.0f, 7.0f);
+        MaximumValue value = new MaximumValue(10.0f, 8.0f, 7.0f);
+        float maximum = (float) value.getMaximumValue();
         Assert.assertEquals(10.0,maximum,0.0f);
     }
 
     @Test
     public void givenFloatValue_WhenSecondValueIsMaximum_ShouldReturnSecond() {
-        MaximumValue value = new MaximumValue();
-        float maximum = value.getMaximumValue(8.0f,10.0f,9.0f);
+        MaximumValue value = new MaximumValue(8.0f,10.0f,9.0f);
+        float maximum = (float) value.getMaximumValue();
         Assert.assertEquals(10.0,maximum,0.0f);
     }
 
     @Test
     public void givenFloatValue_WhenThirdValueIsMaximum_ShouldReturnThird() {
-        MaximumValue value = new MaximumValue();
-        float maximum = value.getMaximumValue(8.0f,9.0f,10.0f);
+        MaximumValue value = new MaximumValue(8.0f,9.0f,10.0f);
+        float maximum = (float) value.getMaximumValue();
         Assert.assertEquals(10.0,maximum,0.0f);
     }
 
     @Test
     public void givenStringValue_WhenFirstValueIsMaximum_ShouldReturnFirstValue() {
-        MaximumValue value = new MaximumValue();
-        String maximum = value.getMaximumValue("Peach", "Apple", "Banana");
+        MaximumValue value = new MaximumValue("Peach", "Apple", "Banana");
+        String maximum = (String) value.getMaximumValue();
         Assert.assertEquals("Peach",maximum);
     }
 
     @Test
     public void givenStringValue_WhenSecondValueIsMaximum_ShouldReturnSecondValue() {
-        MaximumValue value = new MaximumValue();
-        String maximum = value.getMaximumValue("Apple", "Peach", "Banana");
+        MaximumValue value = new MaximumValue("Apple", "Peach", "Banana");
+        String maximum = (String) value.getMaximumValue();
         Assert.assertEquals("Peach",maximum);
     }
     @Test
     public void givenStringValue_WhenThirdValueIsMaximum_ShouldReturnThirdValue() {
-        MaximumValue value = new MaximumValue();
-        String maximum = value.getMaximumValue("Apple", "Banana", "Peach");
+        MaximumValue value = new MaximumValue("Apple", "Banana", "Peach");
+        String maximum = (String) value.getMaximumValue();
         Assert.assertEquals("Peach",maximum);
     }
 }

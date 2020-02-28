@@ -1,8 +1,21 @@
 package com.generics;
 
-public class MaximumValue {
+public class MaximumValue<E extends Comparable<E>> {
 
-    public <E extends Comparable<E>> E getMaximumValue(E value1, E value2, E value3) {
+    private E value1;
+    private E value2;
+    private E value3;
+
+    public MaximumValue(E value1, E value2, E value3) {
+        this.value1=value1;
+        this.value2=value2;
+        this.value3=value3;
+    }
+
+     public E getMaximumValue(){
+        return getMaximumValue(value1,value2,value3);
+    }
+    public static <E extends Comparable<E>> E getMaximumValue(E value1, E value2, E value3) {
         E max = value1;
         if (value2.compareTo(max)>0){
             max = value2;
