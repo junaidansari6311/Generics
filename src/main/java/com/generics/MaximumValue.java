@@ -2,35 +2,13 @@ package com.generics;
 
 public class MaximumValue {
 
-    public int getMaximumInteger(Integer firstInt, Integer secondInt, Integer thirdInt) {
-        Integer max = firstInt;
-        if (secondInt.compareTo(max)>0){
-            max = secondInt;
+    public <E extends Comparable<E>> E getMaximumValue(E value1, E value2, E value3) {
+        E max = value1;
+        if (value2.compareTo(max)>0){
+            max = value2;
         }
-        if (thirdInt.compareTo(max)>0){
-            max = thirdInt;
-        }
-        return max;
-    }
-
-    public float getMaximumFloat(Float firstFloat, Float secondFloat, Float thirdFloat) {
-        Float max = firstFloat;
-        if (secondFloat.compareTo(max)>0){
-            max = secondFloat;
-        }
-        if (thirdFloat.compareTo(max)>0){
-            max = thirdFloat;
-        }
-        return max;
-    }
-
-    public String getMaximumString(String string1, String string2, String string3) {
-        String max = string1;
-        if (string2.compareTo(max)>0){
-            max = string2;
-        }
-        if (string3.compareTo(max)>0){
-            max = string3;
+        if (value3.compareTo(max)>0){
+            max = value3;
         }
         return max;
     }
