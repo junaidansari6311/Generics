@@ -65,5 +65,23 @@ public class MaximumValueTest {
         String maximum = (String) value.getMaximumValue();
         Assert.assertEquals("Peach",maximum);
     }
+
+    @Test
+    public void givenValuesMoreThanThreeIntegers_ShouldReturnMaximum() {
+        int maximum = MaximumValue.getMaximumValue(10, 20, 40, 30, 50);
+        Assert.assertEquals(5,maximum);
+    }
+
+    @Test
+    public void givenValuesMoreThanThreeFloats_ShouldReturnMaximum() {
+        float maximum = MaximumValue.getMaximumValue(2.0f, 3.0f, 1.0f, 4.0f);
+        Assert.assertEquals(4.0f,maximum,0.0f);
+    }
+
+    @Test
+    public void givenValuesMoreThanThreeString_ShouldReturnMaximum() {
+        String maximum = MaximumValue.getMaximumValue("Apple","Banana","Orange","Peach");
+        Assert.assertEquals("Peach",maximum);
+    }
 }
 

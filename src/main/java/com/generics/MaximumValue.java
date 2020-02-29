@@ -1,5 +1,7 @@
 package com.generics;
 
+import java.util.Arrays;
+
 public class MaximumValue<E extends Comparable<E>> {
 
     private E value1;
@@ -15,13 +17,20 @@ public class MaximumValue<E extends Comparable<E>> {
      public E getMaximumValue(){
         return getMaximumValue(value1,value2,value3);
     }
-    public static <E extends Comparable<E>> E getMaximumValue(E value1, E value2, E value3) {
+
+    public static <E extends Comparable<E>> E getMaximumValue(E value1, E value2, E value3,E ...more) {
         E max = value1;
-        if (value2.compareTo(max)>0){
+        if (value2.compareTo(max)>0) {
             max = value2;
         }
-        if (value3.compareTo(max)>0){
+        if (value3.compareTo(max)>0) {
             max = value3;
+        }
+        if (more.length !=0) {
+            Arrays.sort(more);
+            if (more[more.length-1].compareTo(max)>0) {
+                max = more[more.length-1];
+            }
         }
         return max;
     }
