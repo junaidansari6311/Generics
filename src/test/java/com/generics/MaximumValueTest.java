@@ -69,7 +69,7 @@ public class MaximumValueTest {
     @Test
     public void givenValuesMoreThanThreeIntegers_ShouldReturnMaximum() {
         int maximum = MaximumValue.getMaximumValue(10, 20, 40, 30, 50);
-        Assert.assertEquals(5,maximum);
+        Assert.assertEquals(50,maximum);
     }
 
     @Test
@@ -80,8 +80,8 @@ public class MaximumValueTest {
 
     @Test
     public void givenValuesMoreThanThreeString_ShouldReturnMaximum() {
-        String maximum = MaximumValue.getMaximumValue("Apple","Banana","Orange","Peach");
-        Assert.assertEquals("Peach",maximum);
+        String maximum = MaximumValue.getMaximumValue("Apple","Banana","Orange","Peach","Watermelon");
+        Assert.assertEquals("Watermelon",maximum);
     }
 }
 

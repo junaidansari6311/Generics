@@ -18,6 +18,10 @@ public class MaximumValue<E extends Comparable<E>> {
         return getMaximumValue(value1,value2,value3);
     }
 
+    public static <E extends Comparable<E>> void printMax(E max){
+        System.out.println("Maximum value is "+max);
+    }
+
     public static <E extends Comparable<E>> E getMaximumValue(E value1, E value2, E value3,E ...more) {
         E max = value1;
         if (value2.compareTo(max)>0) {
@@ -32,6 +36,7 @@ public class MaximumValue<E extends Comparable<E>> {
                 max = more[more.length-1];
             }
         }
+        printMax(max);
         return max;
     }
 }
